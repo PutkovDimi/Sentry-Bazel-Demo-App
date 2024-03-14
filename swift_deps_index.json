@@ -1,0 +1,127 @@
+{
+  "direct_dep_identities": [
+    "sentry-cocoa",
+    "snapkit"
+  ],
+  "modules": [
+    {
+      "name": "Sentry",
+      "c99name": "Sentry",
+      "src_type": "objc",
+      "label": "@swiftpkg_sentry_cocoa//:Sources_Sentry",
+      "package_identity": "sentry-cocoa",
+      "product_memberships": [
+        "Sentry",
+        "Sentry-Dynamic",
+        "SentrySwiftUI"
+      ]
+    },
+    {
+      "name": "SentryInternal",
+      "c99name": "SentryInternal",
+      "src_type": "objc",
+      "label": "@swiftpkg_sentry_cocoa//:Sources_SentryInternal",
+      "package_identity": "sentry-cocoa",
+      "product_memberships": [
+        "SentrySwiftUI"
+      ]
+    },
+    {
+      "name": "SentryPrivate",
+      "c99name": "SentryPrivate",
+      "src_type": "swift",
+      "label": "@swiftpkg_sentry_cocoa//:Sources_SentryPrivate",
+      "modulemap_label": "@swiftpkg_sentry_cocoa//:Sources_SentryPrivate_modulemap",
+      "package_identity": "sentry-cocoa",
+      "product_memberships": [
+        "Sentry",
+        "Sentry-Dynamic",
+        "SentrySwiftUI"
+      ]
+    },
+    {
+      "name": "SentrySwiftUI",
+      "c99name": "SentrySwiftUI",
+      "src_type": "swift",
+      "label": "@swiftpkg_sentry_cocoa//:Sources_SentrySwiftUI",
+      "package_identity": "sentry-cocoa",
+      "product_memberships": [
+        "SentrySwiftUI"
+      ]
+    },
+    {
+      "name": "SnapKit",
+      "c99name": "SnapKit",
+      "src_type": "swift",
+      "label": "@swiftpkg_snapkit//:Sources_SnapKit",
+      "package_identity": "snapkit",
+      "product_memberships": [
+        "SnapKit",
+        "SnapKit-Dynamic"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "identity": "sentry-cocoa",
+      "name": "Sentry",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_sentry_cocoa//:Sources_Sentry"
+      ]
+    },
+    {
+      "identity": "sentry-cocoa",
+      "name": "Sentry-Dynamic",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_sentry_cocoa//:Sources_Sentry"
+      ]
+    },
+    {
+      "identity": "sentry-cocoa",
+      "name": "SentrySwiftUI",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_sentry_cocoa//:Sources_SentrySwiftUI"
+      ]
+    },
+    {
+      "identity": "snapkit",
+      "name": "SnapKit",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_snapkit//:Sources_SnapKit"
+      ]
+    },
+    {
+      "identity": "snapkit",
+      "name": "SnapKit-Dynamic",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_snapkit//:Sources_SnapKit"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "name": "swiftpkg_sentry_cocoa",
+      "identity": "sentry-cocoa",
+      "remote": {
+        "commit": "38f4f70d07117b9f958a76b1bff278c2f29ffe0e",
+        "remote": "https://github.com/getsentry/sentry-cocoa",
+        "version": "8.21.0"
+      },
+      "cxxLanguageStandard": "c++14"
+    },
+    {
+      "name": "swiftpkg_snapkit",
+      "identity": "snapkit",
+      "remote": {
+        "commit": "e74fe2a978d1216c3602b129447c7301573cc2d8",
+        "remote": "https://github.com/SnapKit/SnapKit.git",
+        "version": "5.7.0"
+      }
+    }
+  ]
+}
