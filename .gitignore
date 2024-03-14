@@ -1,0 +1,9 @@
+# Project files
+*.xcodeproj
+*.xcworkspace
+
+# Generated directories
+/bazel-*
+
+# Hidden files
+.DS_Store
